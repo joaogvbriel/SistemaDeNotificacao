@@ -31,21 +31,17 @@ public class NotificacoesRequestProducer {
         switch (notifications.getPriority()) {
             case "low":
                 kafkaTemplate.send(topicoNotificacoesRequestLow, conteudo);
-                System.out.println("low");
                 break;
 
             case "medium":
                 kafkaTemplate.send(topicoNotificacoesRequestMedium, conteudo);
-                System.out.println("medium");
                 break;
 
             case "high":
                 kafkaTemplate.send(topicoNotificacoesRequestHigh, conteudo);
-                System.out.println("high");
                 break;
             default:
                 kafkaTemplate.send(topicoNotificacoesRequestLow, conteudo);
-                System.out.println("low");
                 break;
         }
         return "Noticação enviada para processamento";

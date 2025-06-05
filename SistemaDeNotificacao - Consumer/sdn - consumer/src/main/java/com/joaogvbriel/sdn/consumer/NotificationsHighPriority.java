@@ -44,6 +44,7 @@ public class NotificationsHighPriority implements KafkaConsumerService{
         notifications.setStatus("pendente");
         Notifications notificationsSalva = notificationsController.salvarNotification(notifications);
         notifications.setId(notificationsSalva.getUuid());
+        notifications.setMessage(notifications.getMessage() + " Para ver o status consulte o id= " + notifications.getId());
         queue.add(notifications);
     }
 

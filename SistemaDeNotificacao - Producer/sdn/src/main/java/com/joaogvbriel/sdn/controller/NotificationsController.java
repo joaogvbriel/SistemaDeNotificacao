@@ -21,10 +21,8 @@ public class NotificationsController {
 
     @PostMapping
     public String enviar(@Valid @RequestBody NotificationsDTO notifications) {
-        System.out.println(notifications.getChannel().toUpperCase().trim());
         if (notifications.getChannel().toUpperCase().trim().equals("SMS") ||
-                notifications.getChannel().toUpperCase().trim().equals("EMAIL") ||
-                notifications.getChannel().toUpperCase().trim().equals("PUSH")) {
+                notifications.getChannel().toUpperCase().trim().equals("EMAIL")) {
 
             if (notifications.getChannel().toUpperCase().trim().equals("SMS")) {
                 if (!validations.isValidPhoneNumber(notifications.getRecipient())) {
