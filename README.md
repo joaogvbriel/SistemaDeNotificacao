@@ -1,7 +1,7 @@
 # Sistema de Notificação
 
 **Sobre o Projeto:**  
-O Sistema de Notificação é uma solução desacoplada e escalável para gerenciamento, envio e monitoramento de notificações via múltiplos canais (e-mail, SMS, push). Projetado em arquitetura de microsserviços, o projeto separa as responsabilidades entre módulos Producer (responsável por autenticação e enfileiramento das notificações) e Consumer (responsável pelo processamento e envio efetivo). A comunicação entre módulos é realizada via Apache Kafka, garantindo alta disponibilidade, desacoplamento e facilidade de escalar componentes de forma independente. O sistema traz integração pronta com Docker Compose para facilitar o setup e a execução, além de aplicar boas práticas de autenticação (JWT), observabilidade e segurança.
+O Sistema de Notificação é uma solução desacoplada e escalável para gerenciamento, envio e monitoramento de notificações via múltiplos canais (e-mail e SMS). Projetado em arquitetura de microsserviços, o projeto separa as responsabilidades entre módulos Producer (responsável por autenticação e enfileiramento das notificações) e Consumer (responsável pelo processamento e envio efetivo). A comunicação entre módulos é realizada via Apache Kafka, garantindo alta disponibilidade, desacoplamento e facilidade de escalar componentes de forma independente. O sistema traz integração pronta com Docker Compose para facilitar o setup e a execução, além de aplicar boas práticas de autenticação (JWT), observabilidade e segurança.
 
 ---
 
